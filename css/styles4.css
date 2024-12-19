@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1b1b1b;
+  color: white;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 20px;
+}
+
+.logo {
+  color: #ff9900;
+  font-size: 28px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #ff9900;
+}
+
+.book-table {
+  background-color: #ff9900;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.book-table:hover {
+  background-color: #d67d00;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px;
+}
+
+.order-summary,
+.delivery-details {
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.order-summary h2 {
+  color: #ff9900;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.order-details h3 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+.order-details ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.order-details ul li {
+  margin: 10px 0;
+}
+
+.order-details .total p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.order-details .total h4 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-top: 20px;
+  color: #ff9900;
+}
+
+.delivery-details h3 {
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px 0;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.terms label {
+  font-size: 14px;
+}
+
+.terms a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.order-now {
+  background-color: #ff9900;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.order-now:hover {
+  background-color: #d67d00;
+}

@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../Images/back-2.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.title {
+  color: rgb(252, 152, 3);
+  font-size: 2rem;
+  margin-left: 20px;
+  transition: 0.25s color, 0.25s text-shadow;
+  &:hover {
+    color: white;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures all items align vertically */
+  margin: 0 30px; /* Adjust margins as needed */
+}
+
+.logo-row {
+  display: flex;
+  align-items: center; /* Centers the image and title vertically */
+  margin-left: 5%; /* Adjust spacing as needed */
+}
+
+.logo-row img {
+  margin-right: 10px; /* Space between logo and title */
+}
+
+.title {
+  color: rgb(252, 152, 3);
+  font-size: 2rem;
+  transition: 0.25s color, 0.25s text-shadow;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Aligns nav items vertically */
+  margin: 0; /* Ensures no extra space around the list */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px; /* Space between nav items */
+}
+
+#cart {
+  margin-left: 20px; /* Adjust position of the cart icon */
+}
+
+nav ul li a {
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.25s color, 0.25s text-shadow;
+
+  &:hover {
+    text-shadow: 0 0 5px rgb(252, 152, 3);
+  }
+}
+.logo-row {
+  margin-top: 0;
+  display: flex;
+  margin-left: 5%;
+  width: 200px;
+
+  align-items: center;
+  justify-content: space-around;
+}
+
+.booking {
+  background-color: rgb(252, 152, 3);
+  color: black;
+  border: none;
+  font-weight: bold;
+  width: 120px;
+  font-size: 1rem;
+  height: 40px;
+  border-radius: 25px;
+}
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  margin-top: 50px;
+  padding: 100px 20px;
+  background-color: #0000007a;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  color: #ffaa00;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* About Content Section */
+.about-content {
+  padding: 50px 20px;
+  background-color: #3333338b;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  color: #ffaa00;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  font-size: 16px;
+}
+
+.bottom {
+  background-color: black;
+  padding: 30px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .info-nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .useful-nav {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}

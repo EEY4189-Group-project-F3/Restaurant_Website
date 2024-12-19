@@ -1,7 +1,8 @@
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(32, 29, 29);
-  background-image: url("./Images/back-1.jpg"), url("./images/back-2.jpg");
+  background-image: url("./Images/back-1.jpg"), url("./Images/back-2.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center bottom;
   background-size: contain;
@@ -26,6 +27,48 @@ nav ul {
 
 nav ul li {
   display: inline-block;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin: 0 30px; 
+}
+
+.logo-row {
+  display: flex;
+  align-items: center; 
+  margin-left: 5%; 
+}
+
+.logo-row img {
+  margin-right: 10px; 
+}
+
+.title {
+  color: rgb(252, 152, 3);
+  font-size: 2rem;
+  transition: 0.25s color, 0.25s text-shadow;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+  margin: 0; 
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#cart {
+  margin-left: 20px; 
 }
 
 nav ul li a {
@@ -384,7 +427,7 @@ input::placeholder {
   }
 }
 
-/*-----------------------------------------*/
+
 
 .menu-container {
   max-width: 1200px;
@@ -443,4 +486,76 @@ input::placeholder {
   font-size: 3rem;
   color: white;
   margin-bottom: 40px;
+}
+
+
+
+
+/* Form Container */
+.reservation-form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+}
+
+.reservation-form-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+/* Form Styles */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form label {
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.reservation-form input,
+.reservation-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.2);
+}
+
+.reservation-form select {
+  cursor: pointer;
+}
+
+/* Submit Button */
+.btn-reserve {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-reserve:hover {
+  background-color: #0056b3;
+  color: #fff;
 }

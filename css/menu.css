@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #181818;
+  color: #fff;
+
+}
+
+header {
+  background-color: #000;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center; /* Centers the image and title vertically */
+  margin-left: 5%; /* Adjust spacing as needed */
+}
+
+.logo-row img {
+  margin-right: 10px; /* Space between logo and title */
+}
+
+.title {
+  color: rgb(252, 152, 3);
+  font-size: 2rem;
+  transition: 0.25s color, 0.25s text-shadow;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Aligns nav items vertically */
+  margin: 0; /* Ensures no extra space around the list */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px; /* Space between nav items */
+}
+
+/* Cart icon and count styling */
+/* Cart Icon Container */
+
+
+
+/* Nav and Other Styles */
+nav ul li a {
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.25s color, 0.25s text-shadow;
+}
+
+.booking {
+  background-color: rgb(252, 152, 3);
+  color: black;
+  border: none;
+  font-weight: bold;
+  width: 120px;
+  font-size: 1rem;
+  height: 40px;
+  border-radius: 25px;
+}
+
+/* Menu Section */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+}
+
+/* Button Styling */
+.book-table,
+.add-to-cart,
+.filter-btn,
+.explore-menu-btn {
+  background-color: #ffaa00;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-table {
+  font-size: 16px;
+  color: #fff;
+}
+
+.add-to-cart:hover,
+.explore-menu-btn:hover,
+.filter-btn.active {
+  background-color: #ffd700;
+}
+
+/* Cart Icon Styling */
+.cart-icon {
+  font-size: 24px;
+}
+
+/* Filter Section */
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  margin: 0 5px;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-item {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.menu-item p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Home Page Specific Styling */
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* Explore Menu Button */
+.explore-menu-btn {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+
+.snowflake {
+  position: absolute;
+  color: white;
+  font-size: 20px; /* Size of the snowflake */
+  pointer-events: none; /* Prevent interference with other elements */
+  animation: fadeAndFall 2s linear infinite;
+}
+
+@keyframes fadeAndFall {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+}

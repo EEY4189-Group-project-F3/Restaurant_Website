@@ -1,14 +1,23 @@
-// Filter button active state
-document.querySelectorAll('.filter-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-        // Add filtering logic here if required
-    });
-});
+document.querySelector("form").addEventListener("submit", function (e) {
+  // Optional: Perform validation or any pre-submission checks here
 
-// Example JavaScript for form handling (optional)
-document.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Sign up successful!');
-});
+  // Display the success alert after form submission
+  alert("Sign up successful!")
+
+  // The form will now be submitted normally without preventing the default action
+})
+
+const signup = document.getElementById("signup")
+const signin = document.getElementById("signin")
+const signupForm = document.getElementById("signup-form")
+const signinForm = document.getElementById("signin-form")
+
+signup.addEventListener("click", () => {
+  signinForm.style.display = "none"
+  signupForm.style.display = "block"
+})
+
+signin.addEventListener("click", () => {
+  signinForm.style.display = "block"
+  signupForm.style.display = "none"
+})
