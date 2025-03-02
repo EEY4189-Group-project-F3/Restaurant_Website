@@ -17,10 +17,39 @@ session_start(); // Start the session to check login status
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="icon.jpg" type="image/x-icon" />
+    <style>
+      .typing-effect {
+  font-size: 36px;
+  font-weight: bold;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #FF5733; /* Cursor effect */
+  width: 0;
+  animation: typing 5s steps(20) 1s infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35ch; /* Adjust this to the number of characters in your text */
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+    </style>
   </head>
   <body>
 
-  <nav>
+  <nav class="navbar">
   <div class="logo-row">
     <img
       src="./Images/res-logo.png"
@@ -60,7 +89,9 @@ session_start(); // Start the session to check login status
 </nav>
 
     <div class="main">
+      <div class="typing-effect">
       <h1 class="main-title">Fast Food Restuarant</h1>
+      </div>
       <p>
         Indulge in a Variety of Quick and Delicious<br />
         Meals, Perfectly Prepared for Your Busy<br />Lifestyle
@@ -327,6 +358,21 @@ session_start(); // Start the session to check login status
       <h1>Feastly</h1>
       <p>Avenue 6th floor Nawala,Colombo</p>
     </div>
+
+    <script>
+  window.onscroll = function() { stickyNavbar() };
+
+var navbar = document.querySelector('.navbar');
+var sticky = navbar.offsetTop;
+
+function stickyNavbar() {
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add('fixed');
+  } else {
+    navbar.classList.remove('fixed');
+  }
+}
+</script>
   </body>
 
   <div class="bottom">
@@ -370,3 +416,4 @@ session_start(); // Start the session to check login status
     </div>
   </div>
 </html>
+
