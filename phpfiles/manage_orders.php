@@ -1,11 +1,24 @@
+
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+//required files
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+?>
 <?php
 session_start();
 
 // Database connection
-$conn = new mysqli('localhost', 'root', '2001ps,.', 'restaurant');
+$conn = new mysqli('localhost', 'root', '2001ps', 'restaurant');
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+
+
 
 // Handle order status update
 // Handle order status update
@@ -16,6 +29,7 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_id']) && isset($_POST['status'])) {
     $order_id = intval($_POST['order_id']);
     $status = $_POST['status'];
+    $Email = $_POST['Email'];
 
     // Update order status
     $stmt = $conn->prepare("UPDATE order_table SET status = ? WHERE order_id = ?");
@@ -264,7 +278,10 @@ $result = $conn->query($sql);
         </thead>
         <tbody>
             <?php if ($result->num_rows > 0): ?>
+                
                 <?php while ($row = $result->fetch_assoc()): ?>
+                    
+                    
                     <?php
                         // Get all food items for the current order
                         $food_sql = "SELECT f.name, oi.quantity, f.price
@@ -315,10 +332,114 @@ $result = $conn->query($sql);
                             <?php if ($row['status'] === 'Pending'): ?>
                                 <form method="post" style="display:inline;">
                                     <input type="hidden" name="order_id" value="<?php echo $row['order_id']; ?>">
+                                    <input type="hidden" name="Email" value="<?php echo $row['email']; ?>">
                                     <button type="submit" name="status" value="Accepted" class="btn-accept">Accept</button>
                                     <button type="submit" name="status" value="Rejected" class="btn-reject">Reject</button>
                                 </form>
-                            <?php elseif ($row['status'] === 'Accepted'): ?>
+                            <?php elseif ($row['status'] === 'Accepted'):
+                         
+
+                                $email =  $row['email']; 
+                            
+                          // Shuffle the array to change the order of characters
+                        
+        
+        
+                            
+                          
+                            $to = $email;
+                            $subject = "Feastly Restaurant - Order Confirmation";
+                            $message = "Hello,\n\n";
+                            $message .= "Your order is accepted:\n\n";
+                            $message .= "\n\n";
+                            $message .= "Thank you.\n";
+                            $headers = "From: gihangreshan4@gmail.com";
+                    
+                            $name="Feastly";
+                            $sender_email='gihangreshan4@gmail.com';
+                            $mail = new PHPMailer(true);
+        
+                            //Server settings
+                            $mail->isSMTP();                              //Send using SMTP
+                            $mail->Host       = 'smtp.gmail.com';       //Set the SMTP server to send through
+                            $mail->SMTPAuth   = true;             //Enable SMTP authentication
+                            $mail->Username   = 'gihangreshan4@gmail.com';   //SMTP write your email
+                            $mail->Password   = 'tzqmftcvovjxlqam';      //SMTP password
+                            $mail->SMTPSecure = 'ssl';            //Enable implicit SSL encryption
+                            $mail->Port       = 465;        
+                            
+                            $mail->setFrom( $sender_email, $name); // Sender Email and name
+                            $mail->addAddress($email);     //Add a recipient email  
+                            $mail->addReplyTo($email, $name);
+        
+        
+                               //Content
+                            $mail->isHTML(true);               //Set email format to HTML
+                            $mail->Subject = $subject;   // email subject headings
+                            $mail->Body    = $message; //email message
+        
+                            // Success sent message alert
+                            $mail->send();
+        
+                           
+                            
+        
+                   
+                           
+                      
+        
+                            
+                 
+                                      
+                                    
+                                
+                                
+                                ?>
+                                <?php elseif ($row['status'] === 'Rejected'):
+                                    
+                                $email =  $row['email']; 
+                            
+                          // Shuffle the array to change the order of characters
+                        
+        
+        
+                            
+                          
+                            $to = $email;
+                            $subject = "Feastly Restaurant - Order Confirmation";
+                            $message = "Hello,\n\n";
+                            $message .= "Your order is Rejected:\n\n";
+                            $message .= "\n\n";
+                            $message .= "Thank you.\n";
+                            $headers = "From: gihangreshan4@gmail.com";
+                    
+                            $name="Feastly";
+                            $sender_email='gihangreshan4@gmail.com';
+                            $mail = new PHPMailer(true);
+        
+                            //Server settings
+                            $mail->isSMTP();                              //Send using SMTP
+                            $mail->Host       = 'smtp.gmail.com';       //Set the SMTP server to send through
+                            $mail->SMTPAuth   = true;             //Enable SMTP authentication
+                            $mail->Username   = 'gihangreshan4@gmail.com';   //SMTP write your email
+                            $mail->Password   = 'tzqmftcvovjxlqam';      //SMTP password
+                            $mail->SMTPSecure = 'ssl';            //Enable implicit SSL encryption
+                            $mail->Port       = 465;        
+                            
+                            $mail->setFrom( $sender_email, $name); // Sender Email and name
+                            $mail->addAddress($email);     //Add a recipient email  
+                            $mail->addReplyTo($email, $name);
+        
+        
+                               //Content
+                            $mail->isHTML(true);               //Set email format to HTML
+                            $mail->Subject = $subject;   // email subject headings
+                            $mail->Body    = $message; //email message
+        
+                            // Success sent message alert
+                            $mail->send();
+                                    
+                                ?>
                                 <form method="post" style="display:inline;">
                                     <input type="hidden" name="order_id" value="<?php echo $row['order_id']; ?>">
                                     <button type="submit" name="status" value="Completed" class="btn-complete">Complete</button>
@@ -383,3 +504,4 @@ $result = $conn->query($sql);
 <?php
 $conn->close();
 ?>
+
