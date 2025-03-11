@@ -295,10 +295,9 @@ session_start(); // Start the session to check login status
   </div>
 
     <h3 class="thanks">
-      Thank you for choosing our restaurant! We are excited to have you dine
-      with us and want to make the reservation process as easy as possible.
-      Please complete the form below to book your table. We look forward to
-      providing you with a memorable dining experience.
+      Thank you for choosing our restaurant! We're delighted to have you dine with us and want to make your reservation
+      process seamless. Simply fill out the form below to secure your table. We can't wait to serve you and create a dining
+      experience you'll remember!
       <br />
       <br />
       See you soon!
