@@ -103,10 +103,10 @@ session_start(); // Start the session to check login status
       <h3>Our Story</h3>
       <h1>We Are Providing Great & Delicious Food About Twenty Years</h1>
       <p>
-        For twenty years, we have been dedicated to serving delicious,
-        high-quality fast food. From our burgers and savory rice and curry to
-        our delightful egg rice, creamy pasta, flavorful kottu, and crispy
-        chicken wings, every dish is crafted with care and passion. <br />
+        For two decades, we have been committed to delivering delicious, top-quality fast
+        food. Whether it's our juicy burgers, savory rice and curry, delightful egg rice,
+        creamy pasta, flavorful kottu, or crispy chicken wings, each dish is prepared with
+        passion and attention to detail. <br />
         <br />Our commitment to excellent cuisine and warm hospitality has made
         us a beloved spot for friends and families. We thank our loyal customers
         for their support and look forward to many more years of serving you.
