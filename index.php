@@ -107,10 +107,10 @@ session_start(); // Start the session to check login status
         food. Whether it's our juicy burgers, savory rice and curry, delightful egg rice,
         creamy pasta, flavorful kottu, or crispy chicken wings, each dish is prepared with
         passion and attention to detail. <br />
-        <br />Our commitment to excellent cuisine and warm hospitality has made
-        us a beloved spot for friends and families. We thank our loyal customers
-        for their support and look forward to many more years of serving you.
-        Thank you for being part of our journey.
+        <br />Our dedication to great food and welcoming service has made us a favorite
+        gathering place for friends and families. We are grateful for the support of our 
+        loyal customers and look forward to continuing to serve you for years to come.
+        Thank you for being part of our story!
       </p>
     </div>
 
