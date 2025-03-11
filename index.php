@@ -316,9 +316,9 @@ session_start(); // Start the session to check login status
           <img src="./images/logo.jpg" alt="" />
           <h3>Online Reservations</h3>
           <p>
-            Planning your visit has never been easier. With our simple online
-            reservation system, you can effortlessly book your table and look
-            forward to a hassle-free dining experience.
+            "Booking your table has never been easier!
+            Our streamlined online reservation system lets you secure your spot effortlessly, 
+            so you can relax and look forward to a smooth, stress-free dining experience."
           </p>
         </div>
 
